@@ -1,5 +1,47 @@
-.heros{
-    &_container{}
-    &_title{}
-    &_subtitle{}
+.heros {
+    position: relative;
+    z-index: 1;
+    min-height: 424px;
+    height: 100%;
+    &_container {
+        min-height: 424px;
+        width: 100%;
+        padding: 0 119px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &_txt {
+        width: 558px;
+    }
+    &_bg {
+        object-fit: cover;
+        min-height: 424px;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    &_title {
+        font-family: GT Eesti Pro Display;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    &_subtitle {
+        font-family: GT Eesti Pro Display;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
 }

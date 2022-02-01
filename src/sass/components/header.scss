@@ -1,5 +1,11 @@
-.header{
-    &_container{
-        
+.header {
+    background: red;
+    padding: 0 28px;
+    height: 90px;
+    &_container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
