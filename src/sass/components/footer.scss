@@ -1,0 +1,33 @@
+.footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #282828;
+    padding: 76px 0;
+    text-align: center;
+
+    @media screen and (min-width: 0px) and (max-width: 768px) {
+        padding: 62px 0;
+
+    }
+
+    &_container{
+        min-width: 748px;
+
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            min-width: auto;
+        }
+       
+    }
+    &_credits{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 49px;
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 42px;
+            
+        }
+    }
+}

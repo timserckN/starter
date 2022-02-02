@@ -3,16 +3,37 @@
     z-index: 1;
     min-height: 424px;
     height: 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: 0px) and (max-width: 768px) {
+        width: auto;
+        min-height: 613px;
+        // overflow: visible;
+    overflow: hidden;
+
+    }
+
     &_container {
         min-height: 424px;
-        width: 100%;
         padding: 0 119px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            display: block;
+
+            min-height: 613px;
+            padding: 40px 0px 0 0px;
+            margin: 0 auto;
+            max-width: 328px;
+        }
     }
     &_txt {
         width: 558px;
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            width: auto;
+        }
     }
     &_bg {
         object-fit: cover;
@@ -20,28 +41,64 @@
         width: 100%;
         position: absolute;
         z-index: -1;
-        top: 0;
         left: 0;
         bottom: 0;
-        right: 0;
+
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            min-height: 613px;
+        }
+
+        &-mobile {
+            display: none;
+
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                display: block;
+            }
+        }
+        &-desktop {
+            display: block;
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                display: none;
+            }
+        }
     }
     &_title {
-        font-family: GT Eesti Pro Display;
+        font-family: GT-Eesti-Pro, sans-serif;
         font-size: 50px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: bold;
         line-height: 58px;
         letter-spacing: 0em;
         text-align: left;
         margin-bottom: 50px;
+
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 46px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 20px;
+            letter-spacing: -0.7px;
+        }
     }
     &_subtitle {
-        font-family: GT Eesti Pro Display;
+        font-family: GT-Eesti-Pro, sans-serif;
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: 35px;
         letter-spacing: 0em;
         text-align: left;
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            font-family: GT-Eesti-Pro, sans-serif;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
     }
 }

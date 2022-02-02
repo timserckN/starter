@@ -1,7 +1,117 @@
-.form{
-    &_label{}
-    &_input{
-        &-txt{}
-        &-checckbox{}
+.form {
+    &_fieldset {
+        position: relative;
+        display: block;
+
+        &-txt {
+            margin-bottom: 39px;
+            height: 35px;
+
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                margin-bottom: 25px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-checkbox {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 23px;
+
+            &:last-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &_label {
+        cursor: pointer;
+        &-txt {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            transition: 0.25s all;
+            opacity: 1;
+            font-weight: bold;
+
+            transform: translateY(0);
+            text-transform: capitalize;
+
+            font-family: GT-Eesti-Pro, sans-serif;
+            // font-family: GT-Eesti-Pro-Medium, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                max-width: auto;
+                font-size: 16px;
+            }
+        }
+        &-checkbox {
+            font-family: GT-Eesti-Pro, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+            max-width: 657px;
+            width: calc(100% - 35px);
+
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                max-width: auto;
+
+                font-size: 16px;
+                line-height: 25px;
+                /* or 156% */
+            }
+        }
+    }
+    &_input {
+        box-shadow: none;
+        &:focus {
+            outline: none;
+        }
+        &-txt {
+            height: 35px;
+            border: none;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #c4c4c4;
+
+            &:focus ~ .form_label,
+            &:not(:placeholder-shown) ~ .form_label {
+                transform: translateY(-35px);
+                transition: 0.25s all;
+                opacity: 0.5;
+            }
+
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                &:focus ~ .form_label,
+                &:not(:placeholder-shown) ~ .form_label {
+                    transform: translateY(-18px);
+                    transition: 0.25s all;
+                    opacity: 0.5;
+                }
+            }
+
+        }
+        &-checkbox {
+            border: none;
+            height: 24px;
+            width: 24px;
+            margin-right: 13px;
+        }
+    }
+    &_btns {
+        @media screen and (min-width: 0px) and (max-width: 425px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

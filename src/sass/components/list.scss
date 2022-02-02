@@ -1,9 +1,49 @@
 .list {
     &_square {
-        &-li {}
+        &-li {
+            padding-left: 29px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: calc(50% - 2px);
+                transform: translate(0%, -50%);
+                height: 19px;
+                width: 19px;
+                background: #f06400;
+            }
+
+            font-family: GT-Eesti-Pro, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+            font-weight: bold;
+        }
     }
-    &_footer {
-        &-li {}
+    &_credit {
+        &-li {
+            font-weight: bold;
+            @media screen and (min-width: 0px) and (max-width: 768px) {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        &-a {
+            text-decoration: none;
+            color: white;
+            opacity: 1;
+            transition: 0.25s all;
+
+            &:hover {
+                opacity: 0.5;
+                transition: 0.25s all;
+            }
+        }
     }
-    &_li {}
 }

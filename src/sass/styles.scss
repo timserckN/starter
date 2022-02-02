@@ -1,4 +1,26 @@
+//vars
+@import "./variables/colors.scss";
+@import "./variables/zIndex.scss";
+@import "./variables/breakpoints.scss";
+@import "./variables/typos.scss";
+
+//mixins
+@import "./mixins/absolute.scss";
+@import "./mixins/zIndex.scss";
+@import "./mixins/breakpoints.scss";
+@import "./mixins/fontFace.scss";
+@import "./mixins/fonts.scss";
+@import "./mixins/ratio.scss";
+@import "./mixins/truncateTxt.scss";
+@import "./mixins/fontSize.scss";
+
+//global
 @import "./global/reset.scss";
+@import "./global/typo.scss";
+@import "./global/visibility.scss";
+
+
+//components
 @import "./components/footer.scss";
 @import "./components/header.scss";
 @import "./components/heros.scss";
@@ -6,3 +28,6 @@
 @import "./components/section.scss";
 @import "./components/cta.scss";
 @import "./components/logo.scss";
+@import "./components/intro.scss";
+@import "./components/solution.scss";
+@import "./components/form.scss";
